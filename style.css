@@ -1,0 +1,25 @@
+:root{--cream:#fbf4e9;--card:#fffaf2;--blush:#f1d5cb;--rose:#d9a5a0;--clay:#b9786f;--sage:#c9d3bd;--ink:#5a4640;--soft:#8a746c;color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:"Quicksand","Nunito",system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 20% 10%,#f6e3da 0,transparent 45%),radial-gradient(circle at 85% 90%,#e8e6d2 0,transparent 45%),var(--cream);display:flex;justify-content:center;padding:max(20px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom))}
+.card{width:100%;max-width:480px;background:var(--card);border-radius:28px;padding:28px 22px;box-shadow:0 10px 40px rgba(185,120,111,.15);align-self:center;animation:fade .5s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1{font-family:Georgia,"Playfair Display",serif;font-weight:400;font-size:1.7rem;margin:0 0 8px;line-height:1.25}
+p{color:var(--soft);line-height:1.55;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid.one{grid-template-columns:1fr}
+.opt{font:inherit;color:var(--ink);background:#fff;border:1.5px solid var(--blush);border-radius:18px;padding:14px 12px;cursor:pointer;text-align:center;transition:.2s}
+.opt:hover,.opt.on{background:var(--blush);transform:translateY(-1px)}
+.opt .e{display:block;font-size:1.5rem;margin-bottom:4px}
+.primary{display:block;width:100%;margin-top:18px;font:inherit;font-weight:600;color:#fff;background:var(--clay);border:0;border-radius:999px;padding:14px;cursor:pointer;text-decoration:none;text-align:center}
+.primary:disabled{opacity:.45;cursor:default}
+.ghost{background:none;border:0;color:var(--soft);font:inherit;cursor:pointer;margin-top:14px;padding:6px}
+.steps{display:flex;gap:6px;margin-bottom:20px}
+.steps i{flex:1;height:5px;border-radius:9px;background:var(--blush)}
+.steps i.d{background:var(--clay)}
+.note{background:#f6ece0;border-radius:18px;padding:16px;margin:14px 0;color:var(--ink);line-height:1.5}
+.pl{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);background:#fff;border:1.5px solid var(--blush);border-radius:18px;padding:14px;margin-bottom:10px}
+.pl:hover{background:var(--blush)}
+.pl b{display:block}.pl small{color:var(--soft)}
+.pl .e{font-size:1.6rem}
+.foot{font-size:.8rem;color:var(--soft);text-align:center;margin-top:20px}
